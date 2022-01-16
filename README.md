@@ -1,2 +1,5 @@
-# ESP32TinyNesMaster
-Port Nes Master to ESP32 TTGO VGA32 v1.x
+# Tiny NES MASTER port ESP32
+<ul>
+ <li><a href='readmeEnglish.md'>English Doc</a></li>
+ <li><a href='readmeSpanish.md'>Spanish Doc</a></li>
+</ul>
