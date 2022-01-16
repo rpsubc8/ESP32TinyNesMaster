@@ -59,7 +59,7 @@
 
 
  //Read keyborad poll x millis
- #define gb_ms_keyboard 20
+ #define gb_ms_keyboard 10
  //Read sound poll x millis
  #define gb_ms_sound 1
  //Skip x frames
