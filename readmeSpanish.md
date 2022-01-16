@@ -15,7 +15,10 @@ He realizado varias modificaciones:
  <li>Soporte para modo 8 y 64 colores (versión reducida de Ricardo Massaro).</li>  
  <li>VGA 320x240</li>   
  <li>Se recomienda sólo usar cartuchos simples sin conmutación de bancos</li>
- <li>Se usa un DIRTY Sound de 3 canales que no es fiel a la emulación real</li>
+ <li>Se usa un DIRTY Sound de 3 canales que no es fiel a la emulación real</li> 
+ <li>Cursores arriba, abajo, izquierda, derecha</li> 
+ <li>Tecla X (botón A), tecla Z (botón B)</li>
+ <li>Tecla C (botón SELECT), tecla V (botón START)</li>
 </ul> 
   
 <br>
