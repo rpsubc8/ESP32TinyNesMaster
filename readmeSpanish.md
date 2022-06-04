@@ -32,9 +32,9 @@ Se requiere:
   <li>Librería reducida Arduino bitluni 0.3.3 (incluida en proyecto)</li>
  </ul>
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/ttgovga32v12.jpg'></center> 
-<br>
+
  
- 
+<br><br>
 <h1>PlatformIO</h1>
 Se debe instalar el PLATFORMIO 2.2.1 desde las extensiones del Visual Studio. Se requiere también Espressif32 v3.3.2.
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/previewPlatformIOinstall.gif'></center>
@@ -45,7 +45,7 @@ Luego procederemos a compilar y subir a la placa. No se usa particiones, así qu
 Está todo preparado para no tener que instalar las librerias de bitluni ni fabgl.
 
 
-<br>
+<br><br>
 <h1>Arduino IDE</h1>
 Todo el proyecto es compatible con la estructura de Arduino 1.8.11.
 Tan sólo tenemos que abrir el <b>nes.ino</b> del directorio <b>nes</b>.
@@ -57,7 +57,7 @@ Debemos desactivar la opción de PSRAM, y en caso de superar 1 MB de binario, se
 
 
 
-<br>
+<br><br>
 <h1>Usabilidad</h1>
 Se permiten las siguientes acciones desde el menú (tecla F1):
  <ul>  
@@ -72,10 +72,9 @@ Se permiten las siguientes acciones desde el menú (tecla F1):
  <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/previewOSD.gif'></center>
  Los ficheros deben ser convertidos a .h en hexadecimal. Puede usarse la herramienta online:<br>
  <a href='http://tomeko.net/online_tools/file_to_hex.php?lang=en'>http://tomeko.net/online_tools/file_to_hex.php?lang=en</a>
- Los DSK están en formato DUMP para ahorrar memoria, y se debe utilizar la herramienta <b>dsk2h</b> para generar los .h necesarios.
  
  
-<br>
+<br><br>
 <h1>Opciones</h1>
 El archivo <b>gbConfig.h</b> se seleccionan las opciones:
 <ul> 
