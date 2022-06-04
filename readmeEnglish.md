@@ -43,3 +43,47 @@ We must modify the <b>platformio.ini</b> file the <b>upload_port</b> option to s
 Then we will proceed to compile and upload to the board. No partitions are used, so we must upload the whole compiled binary.
 It's all set up so you don't have to install the bitluni and fabgl libraries.
   
+<br><br>
+<h1>Arduino IDE</h1>
+The whole project is compatible with the Arduino 1.8.11 framework.
+We only have to open the <b>nes.ino</b> in the <b>nes</b> directory.
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/previewArduinoIDEpreferences.gif'></center>
+We must install the spressif extensions in the additional card url manager <b>https://dl.espressif.com/dl/package_esp32_index.json</b>.
+<br>
+The project is already prepared, so no bitluni or fabgl libraries are needed.
+We must deactivate the PSRAM option, and in case of exceeding 1 MB of binary, select 4 MB of partition when uploading. Although the code does not use PSRAM, if the option is active and our ESP32 does not have it, an exception will be generated and it will restart in loop mode.
+
+<br><br>
+<h1>Usability</h1>
+The following actions are allowed from the menu (F1 key):
+ <ul>
+  <li>Select ROM allows you to choose game ROMs.</li>
+  <li>Offset X of the screen.</li>
+  <li>Change polling milliseconds for video, keyboard, mouse and sound.</li>
+  <li>Sound Volume (100%, 75,%, 50%, 25%, 5%)</li>
+  <li>Sound active or muted.</li>
+  <li>Cpu wait in AUTO mode (set 20 ms per real frame) or wait in ms as desired.</li>
+ </ul>
+A basic low-resource OSD is available, i.e. very simple, which is displayed by pressing the <b>F1</b> key.
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/previewOSD.gif'></center>
+Los ficheros deben ser convertidos a .h en hexadecimal. Puede usarse la herramienta online:<br>
+<a href='http://tomeko.net/online_tools/file_to_hex.php?lang=en'>http://tomeko.net/online_tools/file_to_hex.php?lang=en</a>
+
+
+<br><br>
+<h1>Options</h1>
+The <b>gbConfig.h</b> file options are selected:
+<ul>
+ <li><b>use_lib_vga8colors:</b> Forces to use RGB 8-color mode (3 pins). Outputs 8 colors, as opposed to 64 in normal mode (6 RRGGBB pins).</li>
+ <li><b>use_lib_sound_ricoh2A03:</b> A 3-channel mixer is used in dirty mode, emulating the ricoh2A03. Consume un poco de RAM. It requires the reduced fabgl 0.9.0 library, already included in the project.</li>
+ <li><b>use_lib_log_serial:</b> Logs are sent via usb serial port.</li>
+ <li><b>gb_ms_keyboard:</b> The number of polling milliseconds for the keyboard must be specified.</li>
+ <li><b>gb_ms_sound:</b> The number of polling milliseconds for the sound must be specified.</li>
+ <li><b>gb_delay_emulate_ms:</b> Milliseconds to wait for each completed frame.</li>
+</ul>
+
+
+<br><br>
+<h1>DIY circuit</h1>
+If we don't want to use a TTGO VGA32 v1.x board, we can build it following the <b>fabgl</b> schematic:
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/fabglcircuit.gif'></center>
