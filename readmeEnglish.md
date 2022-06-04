@@ -66,7 +66,7 @@ The following actions are allowed from the menu (F1 key):
  </ul>
 A basic low-resource OSD is available, i.e. very simple, which is displayed by pressing the <b>F1</b> key.
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/previewOSD.gif'></center>
-Los ficheros deben ser convertidos a .h en hexadecimal. Puede usarse la herramienta online:<br>
+The files must be converted to .h in hexadecimal. The online tool can be used:<br>
 <a href='http://tomeko.net/online_tools/file_to_hex.php?lang=en'>http://tomeko.net/online_tools/file_to_hex.php?lang=en</a>
 
 
