@@ -9,6 +9,7 @@ He realizado varias modificaciones:
  <li>Uso de un sólo core</li>
  <li>OSD de bajos recursos</li>
  <li>Creado proyecto compatible con Arduino IDE y Platform IO</li>
+ <li>Proyecto compatible con Web Editor y ArduinoDroid (6.3.1) con tool makeandroid.bat</li>
  <li>Emulación de ricoh2A03 (libreria fabgl) versión reducida de <b>dcrespo3d</b>(David Crespo Tascón)</li>
  <li>Ajuste de pantalla X</li>
  <li>Menú de velocidad de CPU de emulación (AUTO), sonido, teclado</li>
@@ -28,11 +29,25 @@ Se requiere:
   <li>TTGO VGA32 v1.x (1.0, 1.1, 1.2, 1.4)</li>
   <li>Visual Studio 1.48.1 PLATFORMIO 2.2.1 Espressif32 v3.3.2</li>
   <li>Arduino IDE 1.8.11 Espressif System 1.0.6</li>
+  <li>ArduinoDroid (6.3.1)</li>
   <li>Librería reducida Arduino fabgl 0.9.0 (incluida en proyecto PLATFORMIO)</li>
   <li>Librería reducida Arduino bitluni 0.3.3 (incluida en proyecto)</li>
  </ul>
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/ttgovga32v12.jpg'></center> 
 
+
+<br><br>
+<h1>ArduinoDroid</h1>
+Se debe ejecutar, sólo una vez, el script makeandroid.bat, que nos deja toda la estructura de datos del directorio dataFlash en el directorio raiz, así como reemplazando las archivos principales con llamadas de los .h sin usar el directorio de datos dataFlash.<br>
+Al finalizar, el propio script, termina borrando el directorio dataFlash.<br>
+El script utiliza el fart.exe (find and replace text).<br>
+Una vez, se haya ejecutado con éxito, se puede usar con el ArduinoDroid.
+
+
+<br><br>
+<h1>Arduino Web Editor</h1>
+Se debe ejecutar, sólo una vez, el script makeandroid.bat. Una vez finalizado, se sube a la nube como un proyecto cualquiera, ya sea comprimido en zip o por archivos.
+ 
  
 <br><br>
 <h1>PlatformIO</h1>
