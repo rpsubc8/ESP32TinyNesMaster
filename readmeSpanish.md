@@ -102,6 +102,26 @@ El archivo <b>gbConfig.h</b> se seleccionan las opciones:
 </ul>
 
 
+<br><br>
+<h1>Tool rom2h</h1>
+He creado una herramienta muy básica (win32), para convertir los archivos .rom en .h en modo lista para ser procesados por el emulador. Tan sólo tenemos que dejar los archivos .rom en la carpeta <b>input/roms</b> y ejecutar el archivo <b>rom2h.exe</b>, de forma que se generará una salida en el directorio <b>output/dataFlash</b>. Para pruebas, se ha dejado un archivo en el directorio <b>input/roms</b>, que se recomienda borrar en caso de realizar una nueva lista personalizada. También se recomienda borrar los archivos del directorio <b>nes/dataFlash/gbrom.h</b> y <b>nes/dataFlash/rom</b> para tener un proyecto limpio.<br><br>
+<a href='https://github.com/rpsubc8/ESP32TinyNesMaster/tree/main/tools'>Tool chf2h</a>
+<br><br>
+<pre>
+ input/
+  roms/
+   AlfonzoMeleeHB.nes
+   ChaseHB.nes
+ output/
+  dataFlash/
+   rom/
+</pre>
+Posteriormente debemos copiar el directorio <b>dataFlash</b> en el proyecto <b>TinyNesMasterttgovga32\nes</b> sobreescribiendo la carpeta dataFlash previa. Se recomienda limpiar el proyecto y volver a compilar.<br>
+Esta herramienta es muy simple, y no controla los errores, por lo que se recomienda dejarle los archivos con nombres muy simples y lo más sencillo posible.<br>
+El proyecto en PLATFORM.IO está preparado para 1 MB de Flash. Si necesitamos los 4MB de flash, tendremos que modificar la entrada del archivo <b>platformio.ini</b>
+<pre>board_build.partitions = huge_app.csv</pre>
+En el Arduino IDE, debemos elegir la opción <b>Partition Scheme (Huge APP)</b>.
+
 
 <br><br>
 <h1>DIY circuito</h1>
