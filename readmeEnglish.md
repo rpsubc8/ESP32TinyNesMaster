@@ -100,6 +100,27 @@ The <b>gbConfig.h</b> file options are selected:
 
 
 <br><br>
+<h1>Tool rom2h</h1>
+I have created a very basic tool(win32), to convert .nes files to .h in ready mode to be processed by the emulator. We just have to leave the .nes files in the <b>input/roms</b> folder and run the <b>rom2h.exe</b> file, so that an output will be generated in the <b>output/dataFlash</b> directory. For testing purposes, a file has been left in the <b>input/roms</b> directory, which it is recommended to delete in case of making a new custom list. It is also recommended to delete the files in the <b>nes/dataFlash/gbrom.h</b> and <b>nes/dataFlash/rom</b> directory to have a clean project.<br><br><br>
+<a href='https://github.com/rpsubc8/ESP32TinyNesMaster/tree/main/tools'>Tool rom2h</a>
+<br><br>
+<pre>
+ input/
+  roms/
+   AlfonzoMeleeHB.nes
+   ChaseHB.nes
+ output/
+  dataFlash/
+   rom/
+</pre>
+Subsequently we must copy the <b>dataFlash</b> directory into the <b>ESP32TinyNesMaster\nes</b> project overwriting the previous dataFlash folder. It is recommended that you clean up the project and recompile.<br>
+This tool is very simple, and does not check for errors, so it is recommended to leave the files with very simple names and as simple as possible.
+The project in PLATFORM.IO is prepared for 1MB of Flash. If we need the 4MB of flash, we will have to modify the entry in the <b>platformio.ini</b> file.
+<pre>board_build.partitions = huge_app.csv</pre>
+In the Arduino IDE, we must choose the option <b>Partition Scheme (Huge APP)</b>.
+
+
+<br><br>
 <h1>DIY circuit</h1>
 If we don't want to use a TTGO VGA32 v1.x board, we can build it following the <b>fabgl</b> schematic:
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyNesMaster/main/preview/fabglcircuit.gif'></center>
