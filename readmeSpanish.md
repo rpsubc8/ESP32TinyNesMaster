@@ -104,7 +104,7 @@ El archivo <b>gbConfig.h</b> se seleccionan las opciones:
 
 <br><br>
 <h1>Tool rom2h</h1>
-He creado una herramienta muy básica (win32), para convertir los archivos .rom en .h en modo lista para ser procesados por el emulador. Tan sólo tenemos que dejar los archivos .rom en la carpeta <b>input/roms</b> y ejecutar el archivo <b>rom2h.exe</b>, de forma que se generará una salida en el directorio <b>output/dataFlash</b>. Para pruebas, se ha dejado un archivo en el directorio <b>input/roms</b>, que se recomienda borrar en caso de realizar una nueva lista personalizada. También se recomienda borrar los archivos del directorio <b>nes/dataFlash/gbrom.h</b> y <b>nes/dataFlash/rom</b> para tener un proyecto limpio.<br><br>
+He creado una herramienta muy básica (win32), para convertir los archivos .nes en .h en modo lista para ser procesados por el emulador. Tan sólo tenemos que dejar los archivos .rom en la carpeta <b>input/roms</b> y ejecutar el archivo <b>rom2h.exe</b>, de forma que se generará una salida en el directorio <b>output/dataFlash</b>. Para pruebas, se ha dejado un archivo en el directorio <b>input/roms</b>, que se recomienda borrar en caso de realizar una nueva lista personalizada. También se recomienda borrar los archivos del directorio <b>nes/dataFlash/gbrom.h</b> y <b>nes/dataFlash/rom</b> para tener un proyecto limpio.<br><br>
 <a href='https://github.com/rpsubc8/ESP32TinyNesMaster/tree/main/tools'>Tool rom2h</a>
 <br><br>
 <pre>
