@@ -1,8 +1,8 @@
 # Tiny NES MASTER port ESP32
 <ul>
- <li><a href='https://discord.gg/GSeHsw7CrB'><b>Discord:</b> https://discord.gg/GSeHsw7CrB</a></li>
- <li><a href='https://www.youtube.com/watch?v=_MBXnjj_zJM'><b>Youtube:</b> https://www.youtube.com/watch?v=_MBXnjj_zJM</a></li>
- <li><a href='https://retrowiki.es/viewforum.php?f=114'><b>Forum: </b>https://retrowiki.es/viewforum.php?f=114</a></li>
+ <li><b>Discord: </b><a href='https://discord.gg/GSeHsw7CrB'>https://discord.gg/GSeHsw7CrB</a></li>
+ <li><b>Youtube: </b><a href='https://www.youtube.com/watch?v=_MBXnjj_zJM'>https://www.youtube.com/watch?v=_MBXnjj_zJM</a></li>
+ <li><b>Forum: </b><a href='https://retrowiki.es/viewforum.php?f=114'>https://retrowiki.es/viewforum.php?f=114</a></li>
 </ul>
 
 <br><br>
