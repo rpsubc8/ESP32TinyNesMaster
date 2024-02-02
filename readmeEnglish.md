@@ -13,7 +13,7 @@ I have made several modifications:
  <li>Emulation of ricoh2A03 (fabgl library) reduced version of <b>dcrespo3d</b>(David Crespo Tascón)</li>
  <li>Screen adjustment X</li>
  <li>Emulation CPU speed menu (AUTO), sound, keyboard</li>
- <li>Support for 8 and 64 color mode (reduced version by Ricardo Massaro).</li>  
+ <li>Support for 8 and 64 color mode (reduced version by Ricardo Massaro).</li>
  <li>VGA 320x240</li>   
  <li>It is recommended to use only single cartridges without bank switching.</li>
  <li>A 3-channel DIRTY Sound is used which is not faithful to the real emulation.</li> 
@@ -96,6 +96,12 @@ The <b>gbConfig.h</b> file options are selected:
  <li><b>gb_ms_keyboard:</b> The number of polling milliseconds for the keyboard must be specified.</li>
  <li><b>gb_ms_sound:</b> The number of polling milliseconds for the sound must be specified.</li>
  <li><b>gb_delay_emulate_ms:</b> Milliseconds to wait for each completed frame.</li>
+ <li><b>use_lib_fix_double_precision:</b> No usar FPU para el cálculo del PLL.</li>
+ <li><b>use_lib_debug_i2s:</b> Detailed information on the initialisation of the video mode.</li>
+ <li><b>use_lib_measure_time:</b> Displays CPU consumption and fps statistics.</li>
+ <li><b>use_lib_vga320x240x60hz_bitluni:</b> Use bitluni's 320x240 video mode.</li>
+ <li><b>use_lib_vga320x240x60hz_fabgl:</b> Use 320x240 video mode with fabgl settings.</li>
+ <li><b>use_lib_vga320x240x60hz_bitluni_apll_fix:</b> Use bitluni's 320x240 video mode with PLL bug fix.</li>
 </ul>
 
 
