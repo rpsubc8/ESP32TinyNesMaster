@@ -2,8 +2,9 @@
 src_dir = nes/
 
 [env:lolin32]
-platform = espressif32
-board = lolin32
+platform = espressif32@3.3.2
+;board = lolin32
+board = pico32
 framework = arduino
 ; change microcontroller
 board_build.mcu = esp32
