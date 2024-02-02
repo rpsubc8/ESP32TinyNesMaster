@@ -99,6 +99,12 @@ El archivo <b>gbConfig.h</b> se seleccionan las opciones:
  <li><b>gb_ms_keyboard:</b> Se debe especificar el número de milisegundos de polling para el teclado.</li>
  <li><b>gb_ms_sound:</b> Se debe especificar el número de milisegundos de polling para el sonido.</li>
  <li><b>gb_delay_emulate_ms:</b> Milisegundos de espera por cada frame completado.</li>
+ <li><b>use_lib_fix_double_precision:</b> No usar FPU para el cálculo del PLL.</li>
+ <li><b>use_lib_debug_i2s:</b> Información detallada de la inicialización del modo de video.</li>
+ <li><b>use_lib_measure_time:</b> Muestra estadísticas del consumo de CPU y fps.</li>
+ <li><b>use_lib_vga320x240x60hz_bitluni:</b> Usa el modo de video 320x240 de bitluni.</li>
+ <li><b>use_lib_vga320x240x60hz_fabgl:</b> Usa el modo de video 320x240 con los parámetros de fabgl.</li>
+ <li><b>use_lib_vga320x240x60hz_bitluni_apll_fix:</b> Usa el modo de video 320x240 de bitluni con la corección del fallo del PLL.</li>
 </ul>
 
 
