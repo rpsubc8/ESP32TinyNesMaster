@@ -361,8 +361,8 @@ void setup()
  const int grePins[] = {GRE_PINS_6B};
  const int bluPins[] = {BLU_PINS_6B};
  //vga.init(vga.MODE320x240.custom(256,240), redPins, grePins, bluPins, HSYNC_PIN, VSYNC_PIN);
- //funcion vga.init(vga.MODE320x240, redPins, grePins, bluPins, HSYNC_PIN, VSYNC_PIN);
- vga_init(pin_config,VgaMode_vga_mode_320x240,false); //Llamada en C   
+ //funcion vga.init(vga.MODE320x240, redPins, grePins, bluPins, HSYNC_PIN, VSYNC_PIN); 
+ vga_init(pin_config,VgaMode_vga_mode_320x240,false); //Llamada en C
  
  //vga.setFont(Font6x8);
  //vga.clear(BLACK);
@@ -466,7 +466,9 @@ static void run(int width, int height, int start_int, int vblank_int, int vblank
 
         starttime = millis();// backend_getticks();
         jj_ini_cpu = micros();
-        jj_ini_medir_cpu= jj_ini_cpu;
+        #ifdef use_lib_measure_time
+         jj_ini_medir_cpu= jj_ini_cpu;
+        #endif 
 
         //JJ cpu_execute(start_int, memory);
         cpu_execute(start_int);
@@ -486,32 +488,37 @@ static void run(int width, int height, int start_int, int vblank_int, int vblank
         memory[PPUSTATUS] &= 0x3F;
 
         ppu_register_v = ppu_register_t;
+        
+        #ifdef use_lib_measure_time
+         jj_end_medir_cpu = micros();        
+         gb_cur_cpu_ticks= (jj_end_medir_cpu-jj_ini_medir_cpu);
+         if (gb_cur_cpu_ticks>gb_max_cpu_ticks)
+         {
+          gb_max_cpu_ticks= gb_cur_cpu_ticks;
+         }
+         if (gb_cur_cpu_ticks<gb_min_cpu_ticks)
+         {
+          gb_min_cpu_ticks= gb_cur_cpu_ticks;
+         }        
 
-        jj_end_medir_cpu = micros();
-        gb_cur_cpu_ticks= (jj_end_medir_cpu-jj_ini_medir_cpu);
-        if (gb_cur_cpu_ticks>gb_max_cpu_ticks)
-         gb_max_cpu_ticks= gb_cur_cpu_ticks;
-   if (gb_cur_cpu_ticks<gb_min_cpu_ticks)   
-    gb_min_cpu_ticks= gb_cur_cpu_ticks;   
-
-   gb_cpu_timer_cur= millis();
-   if ((gb_cpu_timer_cur-gb_cpu_timer_before)<1000)
-   {   
-   }
-   else
-   {
-    gb_cpu_timer_before= gb_cpu_timer_cur;
-    //Imprimo CPU
-    #ifdef use_lib_measure_time
-     Serial.printf("c:%u m:%u mx:%u\n",gb_cur_cpu_ticks,gb_min_cpu_ticks,gb_max_cpu_ticks);   
-    #endif
+         gb_cpu_timer_cur= millis();
+         if ((gb_cpu_timer_cur-gb_cpu_timer_before)<1000)
+         {   
+         }
+         else
+         {
+          gb_cpu_timer_before= gb_cpu_timer_cur;
+          //Imprimo CPU
+          //#ifdef use_lib_measure_time
+          Serial.printf("c:%u m:%u mx:%u\n",gb_cur_cpu_ticks,gb_min_cpu_ticks,gb_max_cpu_ticks);   
+          //#endif
     
-    //Reseteo CPU a 1 segundo
-    gb_min_cpu_ticks= 1000000;
-    gb_max_cpu_ticks= 0;
-    gb_cur_cpu_ticks= 0;   
-  }      
-
+          //Reseteo CPU a 1 segundo
+          gb_min_cpu_ticks= 1000000;
+          gb_max_cpu_ticks= 0;
+          gb_cur_cpu_ticks= 0;   
+         }      
+        #endif  
 
         //JJ backend_lock();
         
